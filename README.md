@@ -1,7 +1,7 @@
 # What is this?
 * Docker container
 * Steam
-* Ubuntu 18.04 (bionic)/18.10 (cosmic)/19.04 (disco)
+* Ubuntu 19.04 (disco)
 * Very latest free amdgpu drivers from the [oibaf ppa](https://launchpad.net/~oibaf/+archive/ubuntu/graphics-drivers)
 * Vulkan
 * Video
@@ -27,14 +27,5 @@ docker run -d --rm -ti -e DISPLAY=$DISPLAY \
         -v /dev/kfd:/dev/kfd \
         -v /dev:/dev \
         -v /PATH/TO/USER/:/home/steam/ \
-        sleepiestmario/steam-amdgpu-bionic:18.04
+        sleepiestmario/steam-amdgpu:disco
 ```
-
-# List of tested games:
-* Age of Wonders III
-* Dota 2
-* Europa Universalis IV
-* Civilization V
-* Civilization VI
-* Sonic & SEGA All Stars Racing
-* _Please let me know about any other games, so I can add them to the list._

@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:19.04
 LABEL maintainer "Sleepy Mario <theonesleepymario@gmail.com>"
 
 RUN echo 'deb [arch=amd64,i386 trusted=yes] http://repo.steampowered.com/steam precise steam' > /etc/apt/sources.list.d/steam-inst.list && dpkg --add-architecture i386
@@ -7,8 +7,8 @@ RUN apt-get update \
 	&& apt-get upgrade -yq
 RUN apt-get install -yq --no-install-recommends sudo steam-launcher ca-certificates \
 	&& rm -rf /etc/apt/sources.list.d/steam-inst.list 
-RUN echo 'deb [trusted=yes] http://ppa.launchpad.net/oibaf/graphics-drivers/ubuntu bionic main' > /etc/apt/sources.list.d/graphics.list
-RUN echo 'deb-src [trusted=yes] http://ppa.launchpad.net/oibaf/graphics-drivers/ubuntu bionic main ' >> /etc/apt/sources.list.d/graphics.list
+RUN echo 'deb [trusted=yes] http://ppa.launchpad.net/oibaf/graphics-drivers/ubuntu disco main' > /etc/apt/sources.list.d/graphics.list
+RUN echo 'deb-src [trusted=yes] http://ppa.launchpad.net/oibaf/graphics-drivers/ubuntu disco main ' >> /etc/apt/sources.list.d/graphics.list
 RUN apt-get update 
 RUN apt-get upgrade -yq 
 
