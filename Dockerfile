@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:18.10
 LABEL maintainer "Sleepy Mario <theonesleepymario@gmail.com>"
 
 RUN echo 'deb [arch=amd64,i386 trusted=yes] http://repo.steampowered.com/steam precise steam' > /etc/apt/sources.list.d/steam-inst.list && dpkg --add-architecture i386
@@ -7,8 +7,8 @@ RUN apt-get update \
 	&& apt-get upgrade -yq
 RUN apt-get install -yq --no-install-recommends sudo steam-launcher ca-certificates \
 	&& rm -rf /etc/apt/sources.list.d/steam-inst.list 
-RUN echo 'deb [trusted=yes] http://ppa.launchpad.net/oibaf/graphics-drivers/ubuntu bionic main' > /etc/apt/sources.list.d/graphics.list
-RUN echo 'deb-src [trusted=yes] http://ppa.launchpad.net/oibaf/graphics-drivers/ubuntu bionic main ' >> /etc/apt/sources.list.d/graphics.list
+RUN echo 'deb [trusted=yes] http://ppa.launchpad.net/oibaf/graphics-drivers/ubuntu cosmic main' > /etc/apt/sources.list.d/graphics.list
+RUN echo 'deb-src [trusted=yes] http://ppa.launchpad.net/oibaf/graphics-drivers/ubuntu cosmic main ' >> /etc/apt/sources.list.d/graphics.list
 RUN apt-get update 
 RUN apt-get upgrade -yq 
 
@@ -29,6 +29,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -yq xdg-utils \
         libcanberra-gtk-module:i386 libpulse0:i386 attr libxtst6 libxtst6:i386 \
 	mesa-vulkan-drivers mesa-vulkan-drivers:i386 -y \
 	fonts-liberation fonts-wqy-zenhei
+
+RUN apt-get -y install joystick
 
 RUN apt-get autoremove -y && \
 	apt-get autoclean -y &&\

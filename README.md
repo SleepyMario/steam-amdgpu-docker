@@ -1,8 +1,8 @@
 # What is this?
 * Docker container
 * Steam
-* Ubuntu 18.04 (bionic)
-* Very latest free amdgpu drivers from the [oibaf ppa](https://launchpad.net/~oibaf/+archive/ubuntu/graphics-drivers)
+* Ubuntu 18.10 (cosmic)
+* Very latest free amdgpu drivers from the [oibaf ppa](https://launchpad.net/~aphics-drivers)
 * Vulkan
 * Video
 * Audio
@@ -10,13 +10,13 @@
 # Functionality
 
 ### Working:
-* Everything but one. See the next section.
+* 100%
 
 ### Not Working:
-* Joysticks. Any help/fixes would be greatly appreciated!  
+* Nothing found yet. If you run into any problems, need any extra dependencies or know of any improvements or fixes, please let me know so this can be improved.
 
-# How to Run 
-Edit the command below according to your needs and execute it. 
+# How to Run
+Edit the command below according to your needs and execute it.
 ```sh
 docker run -d --rm -ti -e DISPLAY=$DISPLAY \
         -v /tmp/.X11-unix:/tmp/.X11-unix \
@@ -27,7 +27,7 @@ docker run -d --rm -ti -e DISPLAY=$DISPLAY \
         -v /dev/kfd:/dev/kfd \
         -v /dev:/dev \
         -v /PATH/TO/USER/:/home/steam/ \
-        sleepiestmario/steam-amdgpu:bionic
+        sleepiestmario/steam-amdgpu:cosmic
 ```
 
 # List of tested games:
@@ -37,4 +37,4 @@ docker run -d --rm -ti -e DISPLAY=$DISPLAY \
 * Civilization V
 * Civilization VI
 * Sonic & SEGA All Stars Racing
-* _Please let me know about any other games, so I can add them to the list._
+* _Please let me know about any other games!_
