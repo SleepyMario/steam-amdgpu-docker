@@ -27,7 +27,7 @@ docker run -d --rm -ti -e DISPLAY=$DISPLAY \
         -v /dev/kfd:/dev/kfd \
         -v /dev:/dev \
         -v /PATH/TO/USER/:/home/steam/ \
-        sleepiestmario/steam-amdgpu-bionic
+        sleepiestmario/steam-amdgpu-bionic:18.04
 ```
 
 # List of tested games:
