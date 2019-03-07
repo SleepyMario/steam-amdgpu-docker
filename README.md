@@ -29,12 +29,3 @@ docker run -d --rm -ti -e DISPLAY=$DISPLAY \
         -v /PATH/TO/USER/:/home/steam/ \
         sleepiestmario/steam-amdgpu:bionic
 ```
-
-# List of tested games:
-* Age of Wonders III
-* Dota 2
-* Europa Universalis IV
-* Civilization V
-* Civilization VI
-* Sonic & SEGA All Stars Racing
-* _Please let me know about any other games, so I can add them to the list._
