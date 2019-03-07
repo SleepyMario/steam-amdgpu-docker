@@ -1,7 +1,7 @@
 # What is this?
 * Docker container
 * Steam
-* Ubuntu 18.04/18.10/19.04
+* Ubuntu 18.04 (bionic)
 * Very latest free amdgpu drivers from the [oibaf ppa](https://launchpad.net/~oibaf/+archive/ubuntu/graphics-drivers)
 * Vulkan
 * Video
@@ -27,7 +27,7 @@ docker run -d --rm -ti -e DISPLAY=$DISPLAY \
         -v /dev/kfd:/dev/kfd \
         -v /dev:/dev \
         -v /PATH/TO/USER/:/home/steam/ \
-        sleepiestmario/steam-amdgpu-bionic:18.04
+        sleepiestmario/steam-amdgpu:bionic
 ```
 
 # List of tested games:
