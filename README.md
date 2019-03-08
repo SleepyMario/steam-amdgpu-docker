@@ -19,6 +19,7 @@
 Edit the command below according to your needs and execute it. 
 ```sh
 docker run -d --rm -ti -e DISPLAY=$DISPLAY \
+	--name ubuntu-amdgpu-$BRANCH \
         -v /tmp/.X11-unix:/tmp/.X11-unix \
         --device /dev/dri/:/dev/dri \
         -v /run/user/$UID/pulse/native:/tmp/pulse \
@@ -27,5 +28,5 @@ docker run -d --rm -ti -e DISPLAY=$DISPLAY \
         -v /dev/kfd:/dev/kfd \
         -v /dev:/dev \
         -v /PATH/TO/USER/:/home/steam/ \
-        sleepiestmario/steam-amdgpu-bionic:18.04
+        sleepiestmario/steam-amdgpu-bionic:$BRANCH
 ```
