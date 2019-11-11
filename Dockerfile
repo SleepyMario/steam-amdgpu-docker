@@ -1,4 +1,4 @@
-FROM ubuntu:19.04
+FROM ubuntu:19.10
 LABEL maintainer "Sleepy Mario <theonesleepymario@gmail.com>"
 
 RUN echo 'deb [arch=amd64,i386 trusted=yes] http://repo.steampowered.com/steam precise steam' > /etc/apt/sources.list.d/steam-inst.list && dpkg --add-architecture i386
