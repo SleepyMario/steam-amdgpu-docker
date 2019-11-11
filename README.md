@@ -1,7 +1,7 @@
 # What is this?
 * Docker container
 * Steam
-* Ubuntu 18.04 (bionic)/Ubuntu 18.10 (Cosmic)/Ubuntu 19.04 (Disco)
+* Ubuntu 18.04 (bionic)/Ubuntu 19.10 (Eoan)
 * Very latest free amdgpu drivers from the [oibaf ppa](https://launchpad.net/~oibaf/+archive/ubuntu/graphics-drivers)
 * Vulkan
 * Video
